@@ -32,7 +32,6 @@ class Board extends React.Component {
   }
 
   renderSquare(i) {
-    debugger
     return (
       <Square
         value={this.state.squares[i]}
@@ -45,7 +44,7 @@ class Board extends React.Component {
     const winner = calculateWinner(this.state.squares);
     let status;
     if (winner) {
-      status = "Ganador: " + winner;
+      status = "Winner: " + winner;
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
